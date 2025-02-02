@@ -137,6 +137,6 @@ const fs = global.nodemodule["fs-extra"];
 "https://i.imgur.com/vn3vNsi.jpg",
 "https://i.imgur.com/aV4WVsq.jpg"
      ];
-     var callback = () => api.sendMessage({body:`Agar Tum Gay Nhi Ho To Ye Dekho Six Pack -.-`,attachment: fs.createReadStream(__dirname + "/cache/1.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.jpg"));  
+     var callback = () => api.sendMessage({body:`If you are not go then look at this Six Pack -.-`,attachment: fs.createReadStream(__dirname + "/cache/1.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/1.jpg"));  
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/1.jpg")).on("close",() => callback());
    };
